@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { CalendarCheck2, LogOut } from "lucide-react";
 
 const nav = [
-  { to: "/attendance", label: "Faculty", icon: CalendarCheck2 },
+  { to: "/attendance", label: "Dashboard", icon: CalendarCheck2 },
 ];
 
 function Sidebar() {
