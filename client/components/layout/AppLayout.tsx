@@ -62,7 +62,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
             <div>
               <p className="text-sm leading-none opacity-80">Dashboard</p>
               <h1 className="text-lg font-semibold tracking-tight">
-                Dashboard
+                Faculty Member
               </h1>
             </div>
           </div>

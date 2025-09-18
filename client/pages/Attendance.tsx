@@ -486,10 +486,10 @@ export default function Attendance() {
     <div className="space-y-8">
       <div>
         <h2 className="text-2xl font-semibold tracking-tight">
-          Dashboard — Aditya Verma
+          Aditya Verma
         </h2>
         <p className="text-sm text-muted-foreground">
-          Detailed logs from attached Excel
+          Computer Science and Engineering
         </p>
       </div>
 
