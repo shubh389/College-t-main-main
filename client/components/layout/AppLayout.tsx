@@ -4,8 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { LayoutDashboard, CalendarCheck2, LogOut } from "lucide-react";
 
 const nav = [
-  { to: "/", label: "Dashboard", icon: LayoutDashboard },
-  { to: "/attendance", label: "My Attendance", icon: CalendarCheck2 },
+  { to: "/attendance", label: "Dashboard", icon: CalendarCheck2 },
 ];
 
 function Sidebar() {
