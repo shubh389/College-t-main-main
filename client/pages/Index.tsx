@@ -1,8 +1,5 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
-
-import PrincipalDashboard from "@/components/dashboard/PrincipalDashboard";
+import Attendance from "./Attendance";
 
 export default function Index() {
-  return <PrincipalDashboard />;
+  return <Attendance />;
 }
