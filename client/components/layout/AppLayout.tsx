@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { CalendarCheck2, LogOut } from "lucide-react";
 
 const nav = [
-  { to: "/attendance", label: "My Attendance", icon: CalendarCheck2 },
+  { to: "/attendance", label: "Faculty", icon: CalendarCheck2 },
 ];
 
 function Sidebar() {
@@ -62,9 +62,9 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           <div className="flex items-center gap-3">
             <div className="h-9 w-9 rounded-xl bg-white/20" />
             <div>
-              <p className="text-sm leading-none opacity-80">Attendance</p>
+              <p className="text-sm leading-none opacity-80">Dashboard</p>
               <h1 className="text-lg font-semibold tracking-tight">
-                My Attendance
+                Dashboard
               </h1>
             </div>
           </div>
