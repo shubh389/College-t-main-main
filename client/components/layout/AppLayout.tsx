@@ -3,9 +3,7 @@ import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
 import { CalendarCheck2, LogOut } from "lucide-react";
 
-const nav = [
-  { to: "/attendance", label: "Dashboard", icon: CalendarCheck2 },
-];
+const nav = [{ to: "/attendance", label: "Dashboard", icon: CalendarCheck2 }];
 
 function Sidebar() {
   const { pathname } = useLocation();
