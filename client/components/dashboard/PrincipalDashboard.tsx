@@ -1257,14 +1257,14 @@ export default function PrincipalDashboard() {
         <Card>
           <CardContent className="p-4">
             <p className="text-xs text-muted-foreground">Departments</p>
-            <p className="text-2xl font-semibold">{departments.length}</p>
+            <p className="text-2xl font-semibold">{cseDept ? cseDept.code : departments.length}</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4">
             <p className="text-xs text-muted-foreground">Total HODs</p>
             <p className="text-2xl font-semibold">
-              {departments.reduce((s, d) => s + d.hods.length, 0)}
+              {cseDept ? cseDept.hods.length : departments.reduce((s, d) => s + d.hods.length, 0)}
             </p>
           </CardContent>
         </Card>
@@ -1272,11 +1272,13 @@ export default function PrincipalDashboard() {
           <CardContent className="p-4">
             <p className="text-xs text-muted-foreground">Faculty</p>
             <p className="text-2xl font-semibold">
-              {departments.reduce(
-                (s, d) =>
-                  s + d.hods.reduce((x, h) => x + h.faculties.length, 0),
-                0,
-              )}
+              {cseDept
+                ? cseDept.hods.reduce((x, h) => x + h.faculties.length, 0)
+                : departments.reduce(
+                    (s, d) =>
+                      s + d.hods.reduce((x, h) => x + h.faculties.length, 0),
+                    0,
+                  )}
             </p>
           </CardContent>
         </Card>
