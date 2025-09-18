@@ -1,12 +1,9 @@
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
-import { LayoutDashboard, CalendarCheck2, LogOut } from "lucide-react";
+import { CalendarCheck2, LogOut } from "lucide-react";
 
-const nav = [
-  { to: "/", label: "Dashboard", icon: LayoutDashboard },
-  { to: "/attendance", label: "My Attendance", icon: CalendarCheck2 },
-];
+const nav = [{ to: "/attendance", label: "Dashboard", icon: CalendarCheck2 }];
 
 function Sidebar() {
   const { pathname } = useLocation();
@@ -63,9 +60,9 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           <div className="flex items-center gap-3">
             <div className="h-9 w-9 rounded-xl bg-white/20" />
             <div>
-              <p className="text-sm leading-none opacity-80">HOD</p>
+              <p className="text-sm leading-none opacity-80">Dashboard</p>
               <h1 className="text-lg font-semibold tracking-tight">
-                Dashboard
+                Faculty Member
               </h1>
             </div>
           </div>

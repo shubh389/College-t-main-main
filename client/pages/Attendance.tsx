@@ -96,7 +96,7 @@ export default function Attendance() {
     [],
   );
 
-  const [filterDept, setFilterDept] = useState<string>("CSE");
+  const [filterDept, setFilterDept] = useState<string>("All");
   const [search, setSearch] = useState<string>("");
   const [dateFrom, setDateFrom] = useState<string>("");
   const [dateTo, setDateTo] = useState<string>("");
@@ -126,7 +126,7 @@ export default function Attendance() {
 
   useEffect(() => {
     const EXCEL_URL =
-      "https://cdn.builder.io/o/assets%2Fc2eca9bb69a4489eadc6428a9e2e2956%2F32483d4b700b401e8b829638114276db?alt=media&token=f5cea86a-75f4-4856-a4cc-5170be9c7dea&apiKey=c2eca9bb69a4489eadc6428a9e2e2956";
+      "https://cdn.builder.io/o/assets%2F225cf54ec6064988b97c5ef16650aac3%2F4e786b04e62941c2bd95ccf2da3bb345?alt=media&token=584f7071-0d6e-4b03-99dc-d3faecf6f734&apiKey=225cf54ec6064988b97c5ef16650aac3";
     (async () => {
       try {
         const buf = await fetch(EXCEL_URL).then((r) => {
@@ -253,7 +253,7 @@ export default function Attendance() {
         });
 
         const onlyHOD = mapped.filter(
-          (m) => m.name && norm(m.name) === "reyansh patel",
+          (m) => m.name && norm(m.name) === "aditya verma",
         );
         setPunches(onlyHOD);
       } catch (e) {
@@ -485,9 +485,9 @@ export default function Attendance() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-2xl font-semibold tracking-tight">My Attendance — HOD: Reyansh Patel (CSE)</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Aditya Verma</h2>
         <p className="text-sm text-muted-foreground">
-          Detailed logs from attached Excel
+          Computer Science and Engineering
         </p>
       </div>
 
