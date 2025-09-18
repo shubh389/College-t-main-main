@@ -1248,8 +1248,12 @@ export default function PrincipalDashboard() {
     <div className="space-y-8">
       <div className="sticky top-14 z-30 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-2">
         <div className="flex flex-col gap-1">
-          <h2 className="text-2xl font-semibold tracking-tight">Reyansh Patel</h2>
-          <p className="text-sm text-muted-foreground">CSE — Computer Science & Engineering</p>
+          <h2 className="text-2xl font-semibold tracking-tight">
+            Reyansh Patel
+          </h2>
+          <p className="text-sm text-muted-foreground">
+            CSE — Computer Science & Engineering
+          </p>
         </div>
       </div>
 
@@ -1257,14 +1261,18 @@ export default function PrincipalDashboard() {
         <Card>
           <CardContent className="p-4">
             <p className="text-xs text-muted-foreground">Departments</p>
-            <p className="text-2xl font-semibold">{departments.length}</p>
+            <p className="text-2xl font-semibold">
+              {cseDept ? cseDept.code : departments.length}
+            </p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4">
             <p className="text-xs text-muted-foreground">Total HODs</p>
             <p className="text-2xl font-semibold">
-              {departments.reduce((s, d) => s + d.hods.length, 0)}
+              {cseDept
+                ? cseDept.hods.length
+                : departments.reduce((s, d) => s + d.hods.length, 0)}
             </p>
           </CardContent>
         </Card>
@@ -1272,11 +1280,13 @@ export default function PrincipalDashboard() {
           <CardContent className="p-4">
             <p className="text-xs text-muted-foreground">Faculty</p>
             <p className="text-2xl font-semibold">
-              {departments.reduce(
-                (s, d) =>
-                  s + d.hods.reduce((x, h) => x + h.faculties.length, 0),
-                0,
-              )}
+              {cseDept
+                ? cseDept.hods.reduce((x, h) => x + h.faculties.length, 0)
+                : departments.reduce(
+                    (s, d) =>
+                      s + d.hods.reduce((x, h) => x + h.faculties.length, 0),
+                    0,
+                  )}
             </p>
           </CardContent>
         </Card>
@@ -1292,9 +1302,9 @@ export default function PrincipalDashboard() {
 
       <div className="grid grid-cols-1 gap-6">
         {cseDept ? (
-          cseDept.hods.slice(0, 1).map((h) => (
-            <HODCard key={h.id} hod={h} getRows={getRows} />
-          ))
+          cseDept.hods
+            .slice(0, 1)
+            .map((h) => <HODCard key={h.id} hod={h} getRows={getRows} />)
         ) : (
           <Card>
             <CardContent className="p-4 text-sm text-muted-foreground">
