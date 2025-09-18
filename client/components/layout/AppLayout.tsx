@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
-import { LayoutDashboard, CalendarCheck2, LogOut } from "lucide-react";
+import { CalendarCheck2, LogOut } from "lucide-react";
 
 const nav = [
   { to: "/attendance", label: "My Attendance", icon: CalendarCheck2 },
