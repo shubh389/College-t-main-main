@@ -485,7 +485,9 @@ export default function Attendance() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-2xl font-semibold tracking-tight">My Attendance — Aditya Verma</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">
+          My Attendance — Aditya Verma
+        </h2>
         <p className="text-sm text-muted-foreground">
           Detailed logs from attached Excel
         </p>

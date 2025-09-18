@@ -1248,8 +1248,12 @@ export default function PrincipalDashboard() {
     <div className="space-y-8">
       <div className="sticky top-14 z-30 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-2">
         <div className="flex flex-col gap-1">
-          <h2 className="text-2xl font-semibold tracking-tight">Faculty Dashboard</h2>
-          <p className="text-sm text-muted-foreground">List of faculty members</p>
+          <h2 className="text-2xl font-semibold tracking-tight">
+            Faculty Dashboard
+          </h2>
+          <p className="text-sm text-muted-foreground">
+            List of faculty members
+          </p>
         </div>
       </div>
 
